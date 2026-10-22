@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Infinite arrow-key racing game by Naren Gowda." />
+    <title>Naren Gowda | Infinite Racer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">NG</span>
+          <span>Naren Gowda</span>
+        </div>
+        <nav class="nav">
+          <a href="#game">Race</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
+
+      <main class="main-layout" id="game">
+        <section class="game-panel">
+          <div class="hud">
+            <div class="hud-block">
+              <span>Score</span>
+              <strong id="scoreValue">0</strong>
+            </div>
+            <div class="hud-block">
+              <span>Best</span>
+              <strong id="bestValue">0</strong>
+            </div>
+            <div class="hud-block">
+              <span>Speed</span>
+              <strong id="speedValue">0</strong>
+            </div>
+          </div>
+
+          <div class="canvas-wrap">
+            <canvas id="gameCanvas" width="900" height="520" aria-label="Infinite racing game"></canvas>
+
+            <div id="startOverlay" class="overlay visible">
+              <div class="overlay-card">
+                <p class="eyebrow">NEON RACE</p>
+                <h1>Infinite Rush</h1>
+                <p>Use Left / Right to steer, Up to accelerate, and Down to brake.</p>
+                <button id="startButton">Start Race</button>
+              </div>
+            </div>
+
+            <div id="gameOverOverlay" class="overlay hidden">
+              <div class="overlay-card small">
+                <p class="eyebrow">RACE OVER</p>
+                <h2>Crash!</h2>
+                <p id="finalScoreText">Score: 0</p>
+                <button id="restartButton">Play Again</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="info-panel" id="about">
+          <div class="panel-box">
+            <p class="eyebrow">ABOUT ME</p>
+            <h2>Hi, I’m Naren.</h2>
+            <p>
+              I’m a curious developer who enjoys building digital experiences that feel smooth,
+              creative, and useful. I love learning new technologies and turning ideas into
+              projects that people enjoy using.
+            </p>
+          </div>
+
+          <div class="panel-box">
+            <p class="eyebrow">INTERESTS</p>
+            <ul>
+              <li>Web development</li>
+              <li>Product thinking</li>
+              <li>Creative problem solving</li>
+              <li>Learning and building</li>
+            </ul>
+          </div>
+
+          <div class="panel-box">
+            <p class="eyebrow">CONTROLS</p>
+            <div class="keys">
+              <span>←</span>
+              <span>→</span>
+              <span>↑</span>
+              <span>↓</span>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
